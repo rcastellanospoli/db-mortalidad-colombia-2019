@@ -38,7 +38,7 @@ def kpi(etiqueta, identificador, detalle):
 
 app.layout = html.Div([
     html.Header([
-        html.Div('Actividad 3 - Aplicaciones I GR2 - Presentado por: Rodrigo Castellanos Caro',className='sello'),
+        html.Div('Actividad 4 - Aplicaciones I GR2 - Presentado por: Rodrigo Castellanos Caro',className='sello'),
         html.H1('Colombia 2019: Radiografía de la Mortalidad'),
         html.P('Una perspectiva interactiva de la mortalidad colombiana a través de los datos.')
     ],className='cabecera'),
