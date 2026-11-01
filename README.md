@@ -4,7 +4,7 @@
 Proyecto académico de la asignatura **Aplicaciones I - GR2** — Maestría en Inteligencia Artificial.
 
 > **Presentado por:** Rodrigo Castellanos Caro  
-> **Aplicación pública:** https://github.com/rcastellanospoli/dashboard-mortalidad-colombia-2019/
+> **Aplicación pública:** https://mortalidad-colombia-2019-5iea.onrender.com/
 > **Repositorio GitHub:** https://github.com/rcastellanospoli/dashboard-mortalidad-colombia-2019/
 > **Estado:** aplicación desarrollada y probada en Google Colab, publicada en Render a través de este repositorio en GitHub.
 
@@ -326,7 +326,7 @@ El despliegue puede realizarse conectando el repositorio de GitHub con un servic
 
 **Repositorio GitHub:** [Enlace al repositorio](https://github.com/rcastellanospoli/dashboard-mortalidad-colombia-2019)
 
-**Dashboard publicado:** [Acceder a la aplicación](https://github.com/rcastellanospoli/dashboard-mortalidad-colombia-2019/)
+**Dashboard publicado:** [Acceder a la aplicación](https://mortalidad-colombia-2019-5iea.onrender.com/)
 
 
 ## 10. Créditos y referencias
