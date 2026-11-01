@@ -1,0 +1,32 @@
+{
+  "fuente": "DANE - Estadísticas vitales, defunciones no fetales 2019",
+  "url": "https://microdatos.dane.gov.co/index.php/catalog/696/study-description",
+  "total_registros": 244355,
+  "casos_prefijo_X95": 9273,
+  "n_departamentos": 33,
+  "n_municipios": 1110,
+  "tablas": {
+    "mensual.csv.gz": {
+      "filas": 6593,
+      "total": 244355
+    },
+    "causas.csv.gz": {
+      "filas": 57988,
+      "total": 244355
+    },
+    "municipios.csv.gz": {
+      "filas": 10565,
+      "total": 244355
+    },
+    "x95.csv.gz": {
+      "filas": 2053,
+      "total": 9273
+    }
+  },
+  "descripcion": "Tablas agregadas por variables para filtros. No incluyen microdatos fila a fila.",
+  "advertencias": [
+    "COD_DANE es el código geográfico registrado; verificar su alcance en diccionario oficial antes de interpretar residencia.",
+    "X95 se trata como prefijo de causa CIE-10; no representa todos los homicidios.",
+    "Para tasas se requiere denominador municipal de población 2019 compatible con la unidad territorial."
+  ]
+}

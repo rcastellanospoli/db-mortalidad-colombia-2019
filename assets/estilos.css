@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
+:root{
+  --petroleo:#254641;
+  --petroleo-2:#2F5D56;
+  --petroleo-3:#486A63;
+  --oliva:#7C8450;
+  --arcilla:#B9784A;
+  --arena:#D4C4A0;
+  --marfil:#F4F1EA;
+  --superficie:#FBFAF6;
+  --borde:#D7D0C2;
+  --linea:#E6E0D5;
+  --texto:#27352F;
+  --texto-suave:#66756F;
+  --texto-tenue:#87938E;
+  --sombra:0 8px 24px rgba(37,70,65,.07);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0;
+  background:var(--marfil);
+  color:var(--texto);
+  font-family:"IBM Plex Sans",Arial,Helvetica,sans-serif;
+}
+
+a{color:var(--petroleo-2)}
+
+.cabecera{
+  background:linear-gradient(110deg,#223A36,#345A52 58%,#486A63 100%);
+  color:#F8F7F3;
+  padding:30px max(22px,calc((100vw - 1420px)/2));
+  border-bottom:4px solid var(--oliva);
+  box-shadow:0 3px 16px rgba(26,44,39,.12);
+}
+.cabecera h1{
+  margin:10px 0 6px;
+  font-size:clamp(26px,3vw,38px);
+  font-weight:700;
+  line-height:1.15;
+  letter-spacing:-0.02em;
+}
+.cabecera p{
+  color:#D9E4DF;
+  margin:6px 0 0;
+  max-width:920px;
+  line-height:1.55;
+}
+.sello{
+  font-family:"IBM Plex Mono",monospace;
+  letter-spacing:1.25px;
+  color:#D9D5A5;
+  font-size:11.5px;
+  font-weight:600;
+  text-transform:uppercase;
+}
+
+.pagina{
+  max-width:1500px;
+  margin:auto;
+  padding:24px;
+  display:grid;
+  grid-template-columns:300px minmax(0,1fr);
+  gap:22px;
+  align-items:start;
+}
+
+.panel-filtros{
+  background:var(--superficie);
+  border:1px solid var(--borde);
+  border-radius:16px;
+  padding:22px 20px;
+  height:max-content;
+  position:sticky;
+  top:18px;
+  box-shadow:var(--sombra);
+  overflow:visible;
+  z-index:50;
+}
+.panel-filtros h2{
+  font-size:18px;
+  margin:0 0 8px;
+  color:var(--petroleo);
+}
+.filtro-titulo{margin-bottom:6px}
+.texto-secundario{
+  color:var(--texto-suave);
+  font-size:12.5px;
+  line-height:1.58;
+}
+.filtro{
+  margin:20px 0;
+  position:relative;
+  z-index:1;
+}
+.filtro:focus-within{z-index:80}
+.filtro label{
+  display:block;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:9px;
+  color:var(--petroleo);
+}
+.filtro .Select,
+.filtro .Select-control,
+.filtro .Select-menu-outer{
+  font-family:"IBM Plex Sans",Arial,Helvetica,sans-serif;
+}
+.filtro .Select{
+  position:relative;
+}
+.filtro .Select-control{
+  background:#fff;
+  border:1px solid #B9C1B6;
+  border-radius:10px;
+  min-height:44px;
+  box-shadow:none;
+}
+.filtro .Select.is-focused > .Select-control,
+.filtro .Select.is-open > .Select-control{
+  border-color:var(--petroleo-2);
+  box-shadow:0 0 0 2px rgba(47,93,86,.10);
+}
+.filtro .Select-placeholder,
+.filtro .Select--single > .Select-control .Select-value{
+  color:var(--texto);
+  line-height:42px;
+}
+.filtro .Select-input,
+.filtro .Select-input > input{
+  color:var(--texto);
+}
+.filtro .Select-arrow-zone{
+  color:var(--texto-suave);
+}
+.filtro .Select-menu-outer{
+  width:100% !important;
+  min-width:100% !important;
+  max-width:100% !important;
+  left:0 !important;
+  right:auto !important;
+  top:calc(100% + 4px) !important;
+  border:1px solid #B9C1B6;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 10px 26px rgba(30,47,43,.18);
+  background:#fff;
+  z-index:9999 !important;
+}
+.filtro .Select-menu{
+  max-height:270px;
+}
+.filtro .VirtualizedSelectOption,
+.filtro .Select-option,
+.filtro .Select-noresults{
+  white-space:normal;
+  word-break:break-word;
+  line-height:1.35;
+  padding:10px 12px;
+}
+.filtro .Select-option.is-focused,
+.filtro .VirtualizedSelectFocusedOption{
+  background:#EEF2EC;
+  color:var(--petroleo);
+}
+.filtro .Select-option.is-selected{
+  background:#E1E8E1;
+  color:var(--petroleo);
+  font-weight:600;
+}
+.btn-reiniciar{
+  width:100%;
+  padding:12px 13px;
+  border:1px solid #B8C2B8;
+  border-radius:10px;
+  background:#fff;
+  color:var(--petroleo);
+  font-weight:600;
+  font-family:"IBM Plex Sans",Arial,Helvetica,sans-serif;
+  cursor:pointer;
+  transition:all .18s ease;
+}
+.btn-reiniciar:hover{
+  background:#EEF2EC;
+  border-color:var(--petroleo-2);
+}
+
+.contenido{min-width:0; position:relative; z-index:1}
+.indicadores{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:14px;
+}
+.kpi{
+  border:1px solid var(--borde);
+  border-radius:14px;
+  background:var(--superficie);
+  padding:16px 16px 15px;
+  box-shadow:var(--sombra);
+}
+.kpi-titulo{
+  font-size:12px;
+  font-weight:600;
+  color:var(--texto-suave);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.kpi-numero{
+  font-size:clamp(23px,2vw,32px);
+  font-weight:700;
+  letter-spacing:-0.04em;
+  color:var(--petroleo);
+  margin-top:9px;
+  font-family:"IBM Plex Mono",monospace;
+}
+.kpi-detalle{
+  font-size:11.5px;
+  color:var(--texto-tenue);
+  margin-top:5px;
+}
+.texto-resumen{
+  color:var(--texto-suave);
+  font-size:13px;
+  margin:18px 2px;
+}
+.rejilla{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin:16px 0;
+}
+.visual{
+  background:var(--superficie);
+  border:1px solid var(--borde);
+  border-radius:14px;
+  padding:12px 14px 10px;
+  min-width:0;
+  overflow:visible;
+  box-shadow:var(--sombra);
+  position:relative;
+  z-index:1;
+}
+.visual-ancha{margin:16px 0}
+.visual-mapa{z-index:1}
+.seccion-mini{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;
+  letter-spacing:.08em;
+  font-weight:600;
+  color:var(--petroleo-2);
+  padding:6px 7px 2px;
+  text-transform:uppercase;
+}
+.aviso-metodo{
+  padding:14px 17px;
+  margin-top:10px;
+  border-left:4px solid var(--arcilla);
+  background:#FAF4EA;
+  color:#73543B;
+  border-radius:6px;
+  font-size:12.5px;
+  line-height:1.58;
+}
+.pie-pagina{
+  margin-top:25px;
+  padding:22px 6px 8px;
+  border-top:1px solid var(--linea);
+  color:var(--texto-suave);
+  font-size:12.5px;
+  line-height:1.65;
+}
+.pie-pagina a{color:var(--petroleo-2)}
+.pie-pagina p{margin:4px 0}
+
+@media(max-width:1260px){
+  .pagina{grid-template-columns:270px minmax(0,1fr)}
+}
+@media(max-width:1160px){
+  .pagina{grid-template-columns:250px minmax(0,1fr)}
+  .indicadores{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rejilla{grid-template-columns:1fr}
+}
+@media(max-width:750px){
+  .pagina{padding:12px;grid-template-columns:1fr}
+  .panel-filtros{position:static}
+  .indicadores{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cabecera{padding:24px 16px}
+  .visual{padding:10px 8px}
+}

@@ -1,0 +1,14 @@
+app.py: sintaxis OK
+modelo.py: sintaxis OK
+graficos.py: sintaxis OK
+preparar_datos.py: sintaxis OK
+pruebas/verificar.py: sintaxis OK
+app.server y gunicorn: referencias coherentes
+4 tablas CSV agregadas: presentes
+pruebas/verificar.py -> 0
+OK ('__TODOS__', '__TODOS__', '__TODOS__') defunciones= 244355 X95= 9273
+OK ('11', '__TODOS__', '__TODOS__') defunciones= 38760 X95= 601
+OK ('05', 'Masculino', 'Adultez temprana') defunciones= 1788 X95= 538
+OK sin datos -> gráficos vacíos informativos
+OK construcción Plotly coroplético y bordes negros
+PRUEBAS DE DATOS Y FIGURAS: CORRECTAS
